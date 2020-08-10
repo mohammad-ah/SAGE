@@ -1,0 +1,15 @@
+<header>
+  <app-header *ngIf="auth.isLoggedIn()" calss="header"></app-header>
+</header>
+<main>
+  <div class="container">
+    <app-side-bar *ngIf="auth.isLoggedIn()" class="sidebar"></app-side-bar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-ad *ngIf="auth.isLoggedIn()"></app-ad>
+  </div>
+</main>
+<!--<footer>-->
+<!--  <app-footer></app-footer>-->
+<!--</footer>-->
